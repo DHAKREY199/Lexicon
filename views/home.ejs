@@ -1,0 +1,264 @@
+<html>
+<head>
+<title>Lexicon</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Lexicon" />
+<link href="https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="https://www.mikeafford.com/store/store-images/ms01b_example_heavy_rain_showers.png" />
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/stylesheets/bootstrap.sesamo.min.css">
+<link rel="stylesheet" href="/stylesheets/main.css">
+<link rel="stylesheet" href="/stylesheets/home.css">
+<script type="text/javascript" src="/javascript/main.js"></script>
+<script type="text/javascript" src="/javascript/jquery.js"></script>
+     <script type="text/javascript" src="/javascript/bootstrap.min.js"></script>
+
+     <!-- Bootstrap 3 has typeahead optionally -->
+     <script type="text/javascript" src="/javascript/typeahead.min.js"></script>
+
+     <!-- unveilEffects -->
+     <script type="text/javascript" src="/javascript/jquery.unveilEffects.min.js"></script>
+
+     <!-- Demo -->
+     <script type="text/javascript" src="/javascript/application.js"></script>
+
+     <script type="text/javascript" src="/javascript/themeswitcher.js"></script>
+<script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+</head>
+<body>
+    <nav class="navbar navbar-default" role="navigation">
+                             <!-- Brand and toggle get grouped for better mobile display -->
+                             <div class="container">
+                             <div class="navbar-header">
+                                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse" style="border:none;margin-right: 0px;padding-right: 0px;">
+                                     <div class="spinner-master">
+                                      <input type="checkbox" id="spinner-form" />
+                                      <label for="spinner-form" class="spinner-spin">
+                                        <div class="spinner diagonal part-1"></div>
+                                        <div class="spinner horizontal"></div>
+                                        <div class="spinner diagonal part-2"></div>
+                                      </label>
+                                    </div>
+                                 </button>
+                                 <a class="navbar-brand" href="/"><div id="lex"><p>lk.</p></div></a>
+            
+                             </div>
+
+                             <!-- Collect the nav links, forms, and other content for toggling -->
+                             <div class="collapse navbar-collapse navbar-ex1-collapse">
+                                 <ul class="nav navbar-nav">
+                                     <li class="active">
+                                         <a href="">Home </a>
+                                     </li>
+                                     <li>
+                                         <a href="#">Blog </a>
+                                     </li>
+                                     <li>
+                                         <a href="#">Portfolio </a>
+                                     </li>
+                                     <!--<li class="dropdown">-->
+                                     <!--    <a href="#" class="dropdown-toggle" data-toggle="dropdown">-->
+                                     <!--       ________  <b class="caret"></b>-->
+                                     <!--    </a>-->
+                                     <!--    <ul class="dropdown-menu">-->
+                                     <!--        <li>-->
+                                     <!--            <a href="#">Action </a>-->
+                                     <!--        </li>-->
+                                     <!--        <li>-->
+                                     <!--            <a href="#">Another action </a>-->
+                                     <!--        </li>-->
+                                     <!--        <li class="divider"></li>-->
+                                     <!--        <li class="dropdown-header">Dropdown header </li>-->
+                                     <!--        <li>-->
+                                     <!--            <a href="#">Separated link </a>-->
+                                     <!--        </li>-->
+                                     <!--        <li>-->
+                                     <!--            <a href="#">One more separated link </a>-->
+                                     <!--        </li>-->
+                                     <!--    </ul>-->
+                                     <!--</li>-->
+                                 </ul>
+                                 <form class="navbar-form navbar-left" action ="/info" method = "GET">
+                                     <div class="form-group">
+                                         <input type="text" name="search" class="form-control" placeholder="Search" ></div>
+                                 </form>
+                                 <ul class="nav navbar-nav navbar-right">
+                                     <li>
+                                         <a href="#">About </a>
+                                     </li>
+                                     <li>
+                                         <a href="#">Contact </a>
+                                     </li>
+                                     <!--<li class="dropdown">-->
+                                     <!--    <a href="#" class="dropdown-toggle" data-toggle="dropdown">-->
+                                     <!--       ________  <b class="caret"></b>-->
+                                     <!--    </a>-->
+                                     <!--    <ul class="dropdown-menu">-->
+                                     <!--        <li>-->
+                                     <!--            <a href="#">Action </a>-->
+                                     <!--        </li>-->
+                                     <!--        <li>-->
+                                     <!--            <a href="#">Another action </a>-->
+                                     <!--        </li>-->
+                                     <!--        <li>-->
+                                     <!--            <a href="#">Something else here </a>-->
+                                     <!--        </li>-->
+                                     <!--        <li>-->
+                                     <!--            <a href="#">Separated link </a>-->
+                                     <!--        </li>-->
+                                     <!--    </ul>-->
+                                     <!--</li>-->
+                                 </ul>
+                             </div></div>
+                             <!-- /.navbar-collapse -->  </nav>
+    <div class="container">
+        <div class="row">
+            <div class="visible-lg hidden-md hidden-sm hidden-xs pull-right col-lg-5 col-md-5 col-sm-2" id="count"><p>
+                <% if(data.length<10){ %>
+                    <span>0</span><%= data.length %>
+                <% } else { %>
+                    <%= data.length %>
+                    <% } %>
+            </p></div>
+            <div id="word" class="cent pull-left col-lg-7 col-md-5 col-sm-10"> <p><%= id %><i onclick='responsiveVoice.speak("<%= id %>");' class="fa fa-volume-up " style="font-size: 20px; line-height: 50%"></i></p>
+                <span id="meaning">
+                            <p class="prim" style="font-size: 30px;font-weight: 400;color: #404040; letter-spacing:0px">Primary Meaning -</p>
+                            <ul >
+                        <% data.forEach(function(s){ %>
+                           <li style="font-size: 20px;font-weight: 300;color: #404040; letter-spacing:0px"><%= s.definition %></li>
+        
+                        <% }); %>
+                        </ul>
+                </span>
+            </div>
+        </div>
+        <div id="pine" class="pull-right visible-lg hidden-md hidden-sm hidden-xs"><img src="http://annawestbrookauthor.com/wp-content/uploads/2015/06/anna-westbrook-pinecone-smal.jpg" width="750"></div>
+    </div>
+    <div class="container marg">
+        <a class="left carousel-control" id="le" href="#carousel-example-generic" data-slide="prev">
+        <i class="fa fa-arrow-left" aria-hidden="true" style="font-size:30px; color:#080808;"></i>
+      </a>
+      <a class="right carousel-control" id="ri" href="#carousel-example-generic" data-slide="next">
+        <i class="fa fa-arrow-right" aria-hidden="true" style="font-size:30px; color:#080808;"></i>
+      </a>
+        <!--<button name="prev" id="le" class="btn btn-primary-outline"><i class="fa fa-arrow-left" aria-hidden="true" style="font-size:30px; color:#080808;"></i></i></button>-->
+        <!--<button name="next" id="ri" class="btn btn-primary-outline"><i class="fa fa-arrow-right" aria-hidden="true" style="font-size:30px; color:#080808;"></i>-->
+<!--</button>-->
+    </div>
+    <div class="container">
+        <div id="sepleft"></div>
+        <div id="sepright"></div>
+    </div>
+    <div class="container">
+        <!--<p id="define">Definition</p>-->
+        <div class="col-md-12">
+    <h1 style="text-align: center;padding: 25px;padding-bottom:30px; color: #202020;" id="defin">Definition</h1>
+
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false">
+     <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        
+<% data.forEach(function(s){ %>
+<% if(s.definition === first.definition) { %>
+<div class="item active">
+          <div class="row">
+            <div class="col-sm-12 col-md-12">
+              <div class="thumbnail">
+                <div class = "defsalt">
+                    <p class="meaning"><%= s.definition %></p>
+                    <%if(s.examples){ %>
+                        <div class="bord"></div>
+                        <% (s.examples).forEach(function(t){ %>
+                        <p class="example">"<%= t %>"</p>
+                        <% }) %>
+                    <% } %>
+                    <%if(s.synonyms){ %>
+                    <div class="bord"></div>    
+                    <p class="syn">Synonyms</p>
+                        <% (s.synonyms).forEach(function(t){ %>
+                           <p class="synonyms"><%= t %></p> 
+                        <% }) %>
+                    <% } %>
+                    <%if(s.antonyms){ %>
+                    <div class="bord"></div>
+                    <p class="syn">Antonyms</p>
+                        <% (s.antonyms).forEach(function(t){ %>
+                            <p class="synonyms"><%= t %></p>
+                        <% }) %>
+                    <% } %>
+                    <%if(s.similarTo){ %>
+                    <div class="bord"></div>
+                    <p class="syn">Similar To</p>
+                    <% (s.similarTo).forEach(function(t){ %>
+                        <p class="synonyms"><%= t %></p>
+                    <% }) %>
+                    <% } %>
+                    
+                </div>
+              </div>
+            </div>
+
+            
+          </div>
+        </div>
+    <% } else { %>
+        <div class="item">
+          <div class="row">
+            <div class="col-sm-12 col-md-12">
+              <div class="thumbnail">
+                <div class = "defsalt">
+                    <p class="meaning"><%= s.definition %></p>
+                    <%if(s.examples){ %>
+                        <div class="bord"></div>
+                        <% (s.examples).forEach(function(t){ %>
+                        <p class="example">"<%= t %>"</p>
+                        <% }) %>
+                    <% } %>
+                    <%if(s.synonyms){ %>
+                    <div class="bord"></div>    
+                    <p class="syn">Synonyms</p>
+                        <% (s.synonyms).forEach(function(t){ %>
+                           <p class="synonyms"><%= t %></p> 
+                        <% }) %>
+                    <% } %>
+                    <%if(s.antonyms){ %>
+                    <div class="bord"></div>
+                    <p class="syn">Antonyms</p>
+                        <% (s.antonyms).forEach(function(t){ %>
+                            <p class="synonyms"><%= t %></p>
+                        <% }) %>
+                    <% } %>
+                    <%if(s.similarTo){ %>
+                    <div class="bord"></div>
+                    <p class="syn">Similar To</p>
+                    <% (s.similarTo).forEach(function(t){ %>
+                        <p class="synonyms"><%= t %></p>
+                    <% }) %>
+                    <% } %>
+                    
+                </div>
+              </div>
+            </div>
+
+            
+          </div>
+        </div>
+        <% } %>
+       <% }); %>
+
+
+      <!-- Controls -->
+      
+
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      </ol>
+    </div>
+    </div>
+</div>
+</body>
+</html>

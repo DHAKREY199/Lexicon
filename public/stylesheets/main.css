@@ -1,0 +1,591 @@
+body{
+    font-family: 'Muli', sans-serif;
+    background: white;
+}
+#seperate{
+    width:80%;
+    margin: 50px auto;
+    border-bottom: 1px solid #909090;
+}
+.bord{
+    width:50%;
+    margin:50px auto;
+    border-bottom:1px solid #A0A0A0;
+}
+.arrange{
+    margin-left:100px;
+}
+.defs{
+    padding-top:100px;
+    padding-bottom:50px;
+    text-align: center;
+    background-color: #F8F8F8;
+    margin-top:100px;
+    margin-bottom:100px;
+    border: 0.1px solid #F0F0F0;
+}
+.defsalt{
+    padding-top:100px;
+    padding-bottom:50px;
+    text-align: center;
+    background-color: white;
+    /*margin-top:80px;*/
+    /*margin-bottom: 80px;*/
+    border: 2px solid rgba(16,16,16, 0.75);
+    padding:50px;
+}
+#lex{
+    height: 60px;
+    width: 60px;
+    
+            padding-left:5px;
+    border-radius: 50%;
+    background-color: #202020;
+    color: white;
+    font-size: 20px;
+    line-height: 6px;
+    text-align: center;
+}
+#pine{
+    margin-top:-200px;
+    z-index: -1;
+    margin-right:-100px;
+}
+#lex p{
+    font-weight: 400;
+    padding-top:45%;
+    font-style: oblique;
+}
+@media all and (max-width: 1920px) { /* screen size until 1200px */
+    #word {
+        font-size: 7.5em;
+        padding-top: 7vw;
+        font-weight: 900;
+        letter-spacing: 5px;
+        color: #080808;/* 1.5x default size */
+    }
+    
+    #defin{
+        font-size:60px;
+        font-weight: 100;
+    }
+    #cent{
+        margin-top: 50px;
+    }
+    #count{
+        font-size: 20vw;
+        font-weight: 900;
+        color: #f0f0f0;
+        text-align: right;
+        padding-top: 3vw;
+    }
+    #define{
+    font-weight: 800;
+    font-size:5.2vw;
+    padding:30px;
+    text-align:center;
+    }
+    .meaning{
+        font-size:2.3vw;
+        font-weight:600;
+        color: #202020;
+    }
+    .example{
+        font-size:1.5vw;
+        font-style: oblique;
+        color: #686868;
+    }
+    .syn{
+        color: #202020;
+        font-size:4.2vw;
+        padding-bottom:50px;
+        display:inline-block;
+        text-decoration:none;
+        color:#202020;
+    }
+    .synonyms{
+        font-size:1.6vw;
+        font-weight:200;
+    }
+    .meaningalt{
+        font-size:2.3vw;
+        font-weight:600;
+        color: #202020;
+    }
+    .examplealt{
+        font-size:1.5vw;
+        font-style: oblique;
+        color: #686868;
+    }
+    .meanalt{
+        margin:50px auto;
+        border: none;
+        width:50%;
+        background-color: #F8F8F8;
+    }
+    .synalt{
+        color: #202020;
+        font-size:4.2vw;
+        padding-bottom:50px;
+        display:inline-block;
+        text-decoration:none;
+        color:#202020;
+    }
+    .synonymsalt{
+        font-size:1.6vw;
+        font-weight:200;
+    }
+    .dayhead{
+        font-size: 1.6vw;
+        font-weight: 100;
+        color:#202020;
+    }
+    .wordday{
+        font-size: 4.6vw;
+        font-weight: 400;
+        color:#202020;
+    }
+    .daymean{
+        font-size:2.0vw;
+        font-weight: 300;
+        font-style: italic;
+        color: #686868;
+    }
+}
+@media all and (max-width: 1200px) { /* screen size until 1200px */
+    #word {
+        font-size: 7.5em;
+        padding-top: 8vw;
+        font-weight: 900;
+        letter-spacing: 5px;
+        color: #080808;/* 1.5x default size */
+    }
+    #defin{
+        font-size:80px;
+        font-weight: 200;
+    }
+    #define{
+        font-weight: 800;
+        font-size:6.0vw;
+        padding:30px;
+        text-align:center;
+    }
+    .meaning{
+        font-size:2.8vw;
+        font-weight:600;
+        color: #202020;
+    }
+    .example{
+        font-size:2.3vw;
+        font-style: oblique;
+        color: #686868;
+    }
+    .syn{
+        color: #202020;
+        font-size:4.7vw;
+        padding-bottom:50px;
+        display:inline-block;
+        text-decoration:none;
+        color:#202020;
+    }
+    .synonyms{
+        font-size:2.1vw;
+        font-weight:200;
+    }
+    .meaningalt{
+        font-size:2.8vw;
+        font-weight:600;
+        color: #202020;
+    }
+    .examplealt{
+        font-size:2.3vw;
+        font-style: oblique;
+        color: #686868;
+    }
+    .meanalt{
+        margin:50px auto;
+        border: none;
+        width:50%;
+        background-color: #F8F8F8;
+    }
+    .synalt{
+        color: #202020;
+        font-size:4.7vw;
+        padding-bottom:50px;
+        display:inline-block;
+        text-decoration:none;
+        color:#202020;
+    }
+    .synonymsalt{
+        font-size:2.1vw;
+        font-weight:200;
+    }
+    .dayhead{
+        font-size: 2.2vw;
+        font-weight: 100;
+        color:#202020;
+    }
+    .wordday{
+        font-size: 6.9vw;
+        font-weight: 400;
+        color:#202020;
+    }
+    .daymean{
+        font-size:2.8vw;
+        font-weight: 300;
+        font-style: italic;
+        color: #686868;
+    }
+}
+@media all and (max-width: 1000px) { /* screen size until 1000px */
+    #word {
+        font-size: 6.2em; /* 1.2x default size */
+        padding-top: 8vw;
+        font-weight: 900;
+        letter-spacing: 5px;
+        color: #080808;
+        }
+    #defin{
+        font-size:60px;
+        font-weight: 200;
+    }
+    #pineland{
+        width:800px;
+    }    
+    #define{
+        font-weight: 800;
+        font-size:6.2vw;
+        padding:30px;
+    text-align:center;
+    }
+    .meaning{
+        font-size:2.8vw;
+        font-weight:600;
+        color: #202020;
+    }
+    .example{
+        font-size:2.0vw;
+        font-style: oblique;
+        color: #686868;
+    }
+    .syn{
+        color: #202020;
+        font-size:4.7vw;
+        padding-bottom:50px;
+        display:inline-block;
+        text-decoration:none;
+        color:#202020;
+    }
+    .synonyms{
+        font-size:2.1vw;
+        font-weight:200;
+    }
+    .meaningalt{
+        font-size:2.8vw;
+        font-weight:600;
+        color: #202020;
+    }
+    .examplealt{
+        font-size:2.0vw;
+        font-style: oblique;
+        color: #686868;
+    }
+    .meanalt{
+        margin:50px auto;
+        border: none;
+        width:50%;
+        background-color: #F8F8F8;
+    }
+    .synalt{
+        color: #202020;
+        font-size:4.7vw;
+        padding-bottom:50px;
+        display:inline-block;
+        text-decoration:none;
+        color:#202020;
+    }
+    .synonymsalt{
+        font-size:2.1vw;
+        font-weight:200;
+    }
+    .dayhead{
+        font-size: 2.8vw;
+        font-weight: 100;
+        color:#202020;
+    }
+    .wordday{
+        font-size: 8.4vw;
+        font-weight: 400;
+        color:#202020;
+    }
+    .daymean{
+        font-size:2.8vw;
+        font-weight: 300;
+        font-style: italic;
+        color: #686868;
+    }
+}
+@media all and (max-width: 500px) { /* screen size until 500px */
+    #word {
+        font-size: 5.0em;
+        margin-top: -8vw;
+        font-weight: 900;
+        letter-spacing: 5px;
+        color: #080808;
+        }
+        
+    #defin{
+        font-size:40px;
+        font-weight: 300;
+    }
+            #define{
+    font-weight: 800;
+    font-size:6.2vw;
+    padding:30px;
+    text-align:center;
+    }
+    .cent{
+        text-align: center;
+    }
+    .prim{
+        text-align: center;
+    }
+    #meaning li{
+        text-align: left;
+    }
+    .meaning{
+        font-size:4.8vw;
+        font-weight:600;
+        color: #202020;
+    }
+    .example{
+        font-size: 4.0vw;
+        font-style: oblique;
+        color: #686868;
+    }
+    .syn{
+        color: #202020;
+        font-size:6.7vw;
+        padding-bottom:50px;
+        display:inline-block;
+        text-decoration:none;
+        color:#202020;
+    }
+    .synonyms{
+        font-size:4.1vw;
+        font-weight:200;
+    }
+    .meaningalt{
+        font-size:4.8vw;
+        font-weight:600;
+        color: #202020;
+    }
+    .examplealt{
+        font-size:4.0vw;
+        font-style: oblique;
+        color: #686868;
+    }
+    .meanalt{
+        margin:50px auto;
+        border: none;
+        width:50%;
+        background-color: #F8F8F8;
+    }
+    .synalt{
+        color: #202020;
+        font-size:6.7vw;
+        padding-bottom:50px;
+        display:inline-block;
+        text-decoration:none;
+        color:#202020;
+    }
+    .synonymsalt{
+        font-size:4.1vw;
+        font-weight:200;
+    }
+    .dayhead{
+        font-size: 5.6vw;
+        font-weight: 100;
+        color:#202020;
+    }
+    .wordday{
+        font-size: 14.6vw;
+        font-weight: 400;
+        color:#202020;
+    }
+    .daymean{
+        font-size:5.3vw;
+        font-weight: 300;
+        font-style: italic;
+        color: #686868;
+    }
+}
+.center{
+    text-align: center;
+    padding-top: 20px;
+}
+
+
+
+/****************************************************************************************/
+
+
+
+
+.masthead form {
+    position: relative;
+    margin-top: 10px; 
+}
+.masthead .search-field {
+    width: 100%;
+    font-size: 18px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.1);
+    -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,.1);
+    -moz-box-shadow: 0px 0px 10px rgba(0,0,0,.1);
+    padding: 0px  30px;
+    border: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 60px;
+    border: 0.1px solid #D8D8D8;
+}
+.masthead {
+  padding: 40px 0 40px 0;
+  text-align: center;
+}
+.masthead form button {
+    position: absolute;
+    right: 25px;
+    top: 12px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: #808080;
+}
+#pineland{
+    margin-top:-100px;
+}
+#sepleft{
+    height: 5px;
+    width:100px;
+    border:2px solid rgba(16,16,16, 0.5);
+    border-radius: 5px;
+    color: rgba(16,16,16, 0.75);
+    background-color:rgba(16,16,16, 0.75);
+    float: left;
+}
+#sepright{
+    height: 5px;
+    width:100px;
+    border:2px solid rgba(16,16,16, 0.5);
+    border-radius: 5px;
+    color: rgba(16,16,16, 0.75);
+    background-color:rgba(16,16,16, 0.75);
+    float: right;
+}
+#le{
+    margin-bottom: 30px;
+    float: left;
+}
+#ri{
+    margin-bottom: 30px;
+    float: right;
+}
+/*##########################################*/
+
+/*.mydivs {*/
+/*    height:300px;*/
+/*    border:5px solid #ccf;*/
+/*}*/
+/*.mydivs>div {*/
+/*    height:100%;*/
+/*    overflow-y:auto;*/
+/*    border:5px solid #ff0;*/
+/*    padding:1em;*/
+/*    box-sizing:border-box;*/
+/*    -moz-box-sizing:border-box;*/
+/*}*/
+
+
+/* #######################################################  */
+
+
+.btn-round.btn-lg {
+    width: 60px;
+    height: 60px;
+}
+
+.btn-default {
+  font-family: Raleway-SemiBold;
+  font-size: 13px;
+  color: rgba(16,16,16, 0.75);
+  letter-spacing: 1px;
+  line-height: 15px;
+  border: 2px solid rgba(16,16,16, 0.75);
+  border-radius: 40px;
+  /*background: transparent;*/
+  transition: all 0.3s ease 0s;
+}
+
+.btn-default:hover {
+  color: #FFF;
+  background: rgba(16,16,16, 0.75);
+  border: 2px solid rgba(16,16,16, 0.75);
+}
+.btn,.btn:focus,.btn:active {
+   outline: none !important;
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: white;
+    border: none;
+}
+.marg{
+    margin-top: 50px;
+}
+
+/*###############################################################################################*/
+
+
+
+.btn-primary-outline {
+  background-color: #fcfcfc;
+
+}
+
+.btn.active, 
+.btn:active {
+   box-shadow: none;
+}
+/*###################################*/
+
+
+.spinner-master * {transition:all 0.3s;-webkit-transition:all 0.3s;box-sizing:border-box;}
+
+.spinner-master {position:relative;margin:0px auto;height:50px;width:50px;}
+
+.spinner-master input[type=checkbox] {display:none;}
+.spinner-master label {cursor:pointer;position:absolute;z-index:99;height:80%;width:80%;top:10px;left:0;}
+
+.spinner-master .spinner {position:absolute;height:5px;width:100%;background-color:#000;}
+
+.spinner-master .diagonal.part-1 {position:relative;float:left;}
+.spinner-master .horizontal {position:relative;float:left;margin-top:6px;}
+.spinner-master .diagonal.part-2 {position:relative;float:left;margin-top:6px;}
+
+.spinner-master input[type=checkbox]:checked ~ .spinner-spin > .horizontal {opacity: 0;}
+.spinner-master input[type=checkbox]:checked ~ .spinner-spin > .diagonal.part-1 {transform:rotate(405deg);-webkit-transform:rotate(405deg);margin-top:10px;}
+.spinner-master input[type=checkbox]:checked ~ .spinner-spin > .diagonal.part-2 {transform:rotate(-405deg);-webkit-transform:rotate(-405deg);margin-top:-16px;}
+
+
+
+/*#############################################################################*/
+
+.form-control:focus {
+  border-color: #B8B8B8;
+  box-shadow: 0px 0px 10px rgba(0,0,0,.1);
+}
+
+
+/*############################################################*/
+
+

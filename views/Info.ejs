@@ -1,0 +1,17 @@
+
+<% data.forEach(function(s){ %>
+    <div>
+        <p><strong>Definition :</strong><%= s.definition %></p>
+        <p><strong>PartOfSpeech :</strong><%= s.partOfSpeech %></p>
+        
+        <p><strong>SimilarTo :</strong><%= s.similarTo %></p>
+        
+        <%if(s.synonyms != ' ' ){ %>
+            <p><strong>Synonyms :</strong><%= s.synonyms %></p>
+        <% } %>
+        <p><strong>Antonyms :</strong><%= s.antonyms %></p>
+        <p><strong>Derivation :</strong><%= s.derivation %></p>
+        <p><strong>Examples :</strong><%= s.examples %></p>
+    </div>
+    <br />
+<% }); %>

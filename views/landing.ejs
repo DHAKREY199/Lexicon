@@ -1,0 +1,143 @@
+<html>
+<head>
+<title>Lexicon</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Lexicon" />
+<link href="https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="https://www.mikeafford.com/store/store-images/ms01b_example_heavy_rain_showers.png" />
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="/stylesheets/main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+<link rel="stylesheet" href="/stylesheets/bootstrap.sesamo.min.css">
+<link rel="stylesheet" href="/stylesheets/main.css">
+<link rel="stylesheet" href="/stylesheets/home.css">
+<script type="text/javascript" src="/javascript/jquery.js"></script>
+     <script type="text/javascript" src="/javascript/bootstrap.min.js"></script>
+
+     <!-- Bootstrap 3 has typeahead optionally -->
+     <script type="text/javascript" src="/javascript/typeahead.min.js"></script>
+
+     <!-- unveilEffects -->
+     <script type="text/javascript" src="/javascript/jquery.unveilEffects.min.js"></script>
+
+     <!-- Demo -->
+     <script type="text/javascript" src="/javascript/application.js"></script>
+
+     <script type="text/javascript" src="/javascript/themeswitcher.js"></script>
+<script type="text/javascript" src="/javascript/main.js"></script>
+<script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+<script>
+  var socket = io();
+</script>
+</head>
+<body>
+    <nav class="navbar navbar-default" role="navigation">
+                             <!-- Brand and toggle get grouped for better mobile display -->
+                             <div class="container">
+                             <div class="navbar-header">
+                                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse" style="border:none;margin-right: 0px;padding-right: 0px;">
+                                     <div class="spinner-master">
+                                      <input type="checkbox" id="spinner-form" />
+                                      <label for="spinner-form" class="spinner-spin">
+                                        <div class="spinner diagonal part-1"></div>
+                                        <div class="spinner horizontal"></div>
+                                        <div class="spinner diagonal part-2"></div>
+                                      </label>
+                                    </div>
+                                 </button>
+                                 <a class="navbar-brand" href="/"><div id="lex"><p>lk.</p></div></a>
+            
+                             </div>
+
+                             <!-- Collect the nav links, forms, and other content for toggling -->
+                             <div class="collapse navbar-collapse navbar-ex1-collapse">
+                                 <ul class="nav navbar-nav">
+                                     <li class="active">
+                                         <a href="#">Home </a>
+                                     </li>
+                                     <li>
+                                         <a href="#">Blog </a>
+                                     </li>
+                                     <li>
+                                         <a href="#">Portfolio </a>
+                                     </li>
+                                     <!--<li class="dropdown">-->
+                                     <!--    <a href="#" class="dropdown-toggle" data-toggle="dropdown">-->
+                                     <!--       ________  <b class="caret"></b>-->
+                                     <!--    </a>-->
+                                     <!--    <ul class="dropdown-menu">-->
+                                     <!--        <li>-->
+                                     <!--            <a href="#">Action </a>-->
+                                     <!--        </li>-->
+                                     <!--        <li>-->
+                                     <!--            <a href="#">Another action </a>-->
+                                     <!--        </li>-->
+                                     <!--        <li class="divider"></li>-->
+                                     <!--        <li class="dropdown-header">Dropdown header </li>-->
+                                     <!--        <li>-->
+                                     <!--            <a href="#">Separated link </a>-->
+                                     <!--        </li>-->
+                                     <!--        <li>-->
+                                     <!--            <a href="#">One more separated link </a>-->
+                                     <!--        </li>-->
+                                     <!--    </ul>-->
+                                     <!--</li>-->
+                                 </ul>
+                                 <!--<form class="navbar-form navbar-left" role="search">-->
+                                 <!--    <div class="form-group">-->
+                                 <!--        <input type="text" class="form-control" placeholder="Search" /></div>-->
+                                 <!--</form>-->
+                                 <ul class="nav navbar-nav navbar-right">
+                                     <li>
+                                         <a href="#">About </a>
+                                     </li>
+                                     <li>
+                                         <a href="#">Contact </a>
+                                     </li>
+                                     <!--<li class="dropdown">-->
+                                     <!--    <a href="#" class="dropdown-toggle" data-toggle="dropdown">-->
+                                     <!--       ________  <b class="caret"></b>-->
+                                     <!--    </a>-->
+                                     <!--    <ul class="dropdown-menu">-->
+                                     <!--        <li>-->
+                                     <!--            <a href="#">Action </a>-->
+                                     <!--        </li>-->
+                                     <!--        <li>-->
+                                     <!--            <a href="#">Another action </a>-->
+                                     <!--        </li>-->
+                                     <!--        <li>-->
+                                     <!--            <a href="#">Something else here </a>-->
+                                     <!--        </li>-->
+                                     <!--        <li>-->
+                                     <!--            <a href="#">Separated link </a>-->
+                                     <!--        </li>-->
+                                     <!--    </ul>-->
+                                     <!--</li>-->
+                                 </ul>
+                             </div>
+                         </div>
+                     </nav>
+    
+    <div class="container center" id="cent" style="padding-top:0px;">
+        <p class="dayhead">Word of the day</p>
+        <p class="wordday"><%= word %><i onclick='responsiveVoice.speak("<%= word %>");' class="fa fa-volume-up " style="font-size: 20px; line-height: 50%"></i></p>
+        <p class="daymean">"<%= text %>"</p>
+        </div>
+        <div class="masthead text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <form action ="/info" method = "GET">
+                        <input type="text" class="search-field form-control" placeholder="Search Something ... " name ="search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class=" visible-lg visible-md visible-sm"><img id="pineland" src="blur_edges.jpg" ></div>
+    </div>
+    </div>
+</body>
+</html>
